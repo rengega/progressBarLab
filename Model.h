@@ -21,7 +21,7 @@ public:
 
     int getFilesSize();
 
-    std::list<std::string> readFiles();
+    std::vector<std::string> readFiles();
 
     void addFile(std::string filePath);
 

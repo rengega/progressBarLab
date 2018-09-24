@@ -34,8 +34,8 @@ int Model::getFilesSize() {
     return totFileSize;
 }
 
-std::list<std::string> Model::readFiles() {
-    std::list<std::string> myContents;
+std::vector<std::string> Model::readFiles() {
+    std::vector<std::string> myContents;
     for (std::string myFilePath: files) {
         std::fstream myFile(myFilePath);
         if (myFile.is_open()){
