@@ -6,4 +6,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 add_subdirectory(test)
 
-add_executable(ProgressBarLab main.cpp)
+add_executable(ProgressBarLab main.cpp Observer.h Subject.h Model.cpp Model.h)
