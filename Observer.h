@@ -1,0 +1,8 @@
+//
+// Created by ren on 24.9.2018.
+//
+
+#ifndef PROGRESSBARLAB_OBSERVER_H
+#define PROGRESSBARLAB_OBSERVER_H
+
+#endif //PROGRESSBARLAB_OBSERVER_H
