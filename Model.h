@@ -20,6 +20,7 @@ public:
     }
 
     int getFilesSize();
+    void loadFiles();
 
     std::vector<std::string> readFiles();
 

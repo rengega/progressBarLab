@@ -53,3 +53,9 @@ std::vector<std::string> Model::readFiles() {
     return myContents;
 }
 
+void Model::loadFiles() {
+    for (int i = 0; i <= totFileSize; ++i) {
+        notify(i);
+    }
+}
+
