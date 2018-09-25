@@ -9,5 +9,5 @@ include(${wxWidgets_USE_FILE})
 
 add_subdirectory(test)
 
-add_executable(ProgressBarLab main.cpp Observer.h Subject.h Model.cpp Model.h View.cpp View.h)
+add_executable(ProgressBarLab main.cpp Observer.h Subject.h Model.cpp Model.h View.cpp View.h ScrolledPanel.h)
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
