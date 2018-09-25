@@ -24,7 +24,7 @@ public:
 
     std::vector<std::string> readFiles();
 
-    void addFile(std::string filePath);
+    bool addFile(std::string filePath);
 
     virtual void addObserver(Observer* o) override;
     virtual void removeObserver(Observer* o) override;

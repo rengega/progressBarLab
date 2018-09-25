@@ -20,14 +20,17 @@ void Model::notify(int i) {
     }
 }
 
-void Model::addFile(std::string filePath) {
+bool Model::addFile(std::string filePath) {
     files.push_back(filePath);
     std::fstream myFile(filePath);
-    myFile.seekg(0, std::ios::end);
-    totFileSize += myFile.tellg();
-    myFile.clear();
-    myFile.seekg(0, std::ios::beg);
-
+    if(myFile.is_open()){
+        myFile.seekg(0, std::ios::end);
+        totFileSize += myFile.tellg();
+        myFile.clear();
+        myFile.seekg(0, std::ios::beg);
+        return true;
+    } else
+        return false;
 }
 
 int Model::getFilesSize() {
