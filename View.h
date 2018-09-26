@@ -18,6 +18,7 @@ class View: public Observer, public wxFrame {
 public:
     View(Model* model, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
     ~View(){
+        myModel->removeObserver(this);
         delete[] myModel;
         delete[] progressBar;
     }

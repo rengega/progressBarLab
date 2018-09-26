@@ -21,8 +21,8 @@ bool MyApp::OnInit() {
     Model* myModel;
     myModel = new Model;
 
-    myModel->addFile("/home/ren/CLionProjects/untitled/res/text1");
-    myModel->addFile("/home/ren/CLionProjects/untitled/res/text1.1");
+    myModel->addFile("../res/text1");
+    myModel->addFile("../res/text1.1");
 
     View* frame = new View(myModel,("LA DIVINA COMMEDIA"), wxPoint(50,50), wxSize(950,650));
     myModel->loadFiles();

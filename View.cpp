@@ -42,7 +42,6 @@ void View::update(int i) {
     wxString totSize = wxString::Format(wxT("%i"),myModel->getFilesSize());
     wxString loaded = wxString::Format(wxT("%i"),i);
     progressBar->Update(i, wxT("Loaded ") + loaded + wxT(" of ") + totSize + wxT(" bytes"));
-
 }
 
 
