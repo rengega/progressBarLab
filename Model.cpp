@@ -51,7 +51,6 @@ std::vector<std::string> Model::readFiles() {
             }
             myContents.push_back(myContent);
         }
-
     }
     return myContents;
 }

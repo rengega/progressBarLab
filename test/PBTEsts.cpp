@@ -3,24 +3,18 @@
 //
 #include <gtest/gtest.h>
 #include "../Model.h"
-#include "../View.h"
-#include "../ScrolledPanel.h"
 #include "../TestObserver.h"
-
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
 #endif
 #include <wx/progdlg.h>
 
-
-
 TEST(runAllTests, testAddFile){
     Model* myTestingModel = new Model;
     ASSERT_FALSE(myTestingModel->addFile("/C/Windows/this/path/doesnt/exist"))<<"invalid file path";
     ASSERT_TRUE(myTestingModel->addFile("/home/ren/Desktop/testFile1"));
     ASSERT_TRUE(myTestingModel->addFile("/home/ren/Desktop/testFile2"));
-
 }
 
 class Model_Fixture:public ::testing::Test{

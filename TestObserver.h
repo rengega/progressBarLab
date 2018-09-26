@@ -15,7 +15,6 @@ public:
     int getTestResult(){
         return testResult;
     }
-
 private:
     int testResult = 0;
 };

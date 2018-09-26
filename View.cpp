@@ -8,7 +8,6 @@ View::View(Model *model, const wxString &title, const wxPoint &pos, const wxSize
         : wxFrame( NULL, wxID_ANY, title, pos, size, style ){
     myModel = model;
     myModel->addObserver(this);
-
     wxMenu *menuFile = new wxMenu;
     menuFile->AppendSeparator();
     menuFile->Append(wxID_EXIT);
@@ -20,21 +19,14 @@ View::View(Model *model, const wxString &title, const wxPoint &pos, const wxSize
     SetMenuBar( menuBar );
     CreateStatusBar();
     SetStatusText( "nel mezzo del camin di nostra vita..." );
-
     progressBar = new wxProgressDialog(wxT("Loading files"), wxT("Wait..."), myModel->getFilesSize(), this, wxPD_AUTO_HIDE | wxPD_APP_MODAL);
-
     wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
-
     leftText = new ScrolledPanel(this, wxID_ANY);
     rightText = new ScrolledPanel(this, wxID_ANY);
-
     sizer->Add(leftText, 1, wxEXPAND);
     sizer->Add(rightText, 1, wxEXPAND);
-
     this->SetSizer(sizer);
-
     readFiles();
-
     this->Centre(wxBOTH);
 }
 
